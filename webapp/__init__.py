@@ -1,11 +1,17 @@
 from flask import Flask, render_template
+from webapp.model import db
 from webapp.weather import weather_by_city
 from webapp.python_org_news import get_python_news
+
 
 
 def create_app():
     app = Flask(__name__)
     app.config.from_pyfile('config.py')
+    db.init_app(app)
+    with app.app_context():
+        db.create_all()
+
     @app.route('/')
     def index():
         title = "Новости Python"
