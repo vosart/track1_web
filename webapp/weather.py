@@ -1,14 +1,15 @@
-from flask import current_app
 import requests
+from flask import current_app
+
 
 def weather_by_city(city):
-    weather_url = current_app.config["WEATHER_URL"] 
+    weather_url = current_app.config['WEATHER_URL']
     params = {
-        "key": current_app.config["WEATHER_API_KEY"],
-        "q": city,
-        "format": "json",
-        "num_of_days": 1,
-        "lang": "ru"
+        'key': current_app.config['WEATHER_API_KEY'],
+        'q': city,
+        'format': 'json',
+        'num_of_days': 1,
+        'lang': 'ru',
     }
     try:
         result = requests.get(weather_url, params=params)
@@ -24,7 +25,7 @@ def weather_by_city(city):
         print('Сетевая ошибка!')
         return False
     return False
-    
 
-if __name__ == "__main__":
-    print(weather_by_city("Rostov-on-Don,Russia"))
+
+if __name__ == '__main__':
+    print(weather_by_city('Rostov-on-Don,Russia'))
