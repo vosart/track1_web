@@ -563,6 +563,17 @@ WTForms = "*"
 email = ["email-validator"]
 
 [[package]]
+name = "functools"
+version = "0.5"
+description = "Fast tools for functional programming"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "functools-0.5.tar.gz", hash = "sha256:596ed8999dee419c0749a41bfdd82e4697e80ea27ee01c716003ef55be9a54c5"},
+]
+
+[[package]]
 name = "gitdb"
 version = "4.0.10"
 description = "Git Object Database"
@@ -1247,4 +1258,4 @@ email = ["email-validator"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "81fdf01b37511a65a31246cf6f31895df187e6256779a3a4ff9e69ccb52f6831"
+content-hash = "f4216624328f4d59649ab6636267e292f6d9543fcd01af82b0f911fd1012fbe5"
